@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress bar</title>
+    <link rel="stylesheet" href="progress_bar/style.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <div id="preloader"></div> 
+    
+<!-- are we done yet? -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html#header"> <img src="resources/images/barnabas.png" class="logo"> </a>
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            
+
+            <div class="progress-bar-container">
+            <div class="tab-titles">
+                <h1 class="tab-links active-link" onclick="opentab('language-skills')">Web language skills</h1>
+        
+                <h1 class="tab-links" onclick="opentab('developmet-type')">Development Type</h1>
+            </div>
+            
+            <div class="skills tab-contents active-tab" id="language-skills">
+                <div class="row-skills">
+                <h2>HTML</h2>
+                <div class="progress-bar">
+                    <div class="html"><span>87%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                <h2>CSS</h2>
+                <div class="progress-bar">
+                    <div class="css"><span>78%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                <h2>JavaScript</h2>
+                <div class="progress-bar">
+                    <div class="javascript"><span>72%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                 <h2>React</h2>
+                <div class="progress-bar">
+                    <div class="react"><span>45%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                <h2>JAVA</h2>
+                <div class="progress-bar">
+                    <div class="java"><span>75%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                <h2>Kotlin</h2>
+                <div class="progress-bar">
+                    <div class="kotlin"><span>52%</span></div>
+                </div>
+
+            </div>  
+        </div>
+        
+    
+        <div class="skills tab-contents" id="developmet-type">
+
+            <div class="row-skills">
+                <h2>Front-end Development</h2>
+                <div class="progress-bar">
+                    <div class="front-end "><span>80%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                <h2>Desktop application</h2>
+                <div class="progress-bar">
+                    <div class="desktop "><span>80%</span></div>
+                </div>
+            </div>
+
+            <div class="row-skills">
+                <h2>Android Application</h2>
+                <div class="progress-bar">
+                    <div class="android"><span>61%</span></div>
+                </div>
+            </div>
+                
+        </div>
+     </div>
+    </div>
+
+    
+
+
+
+    
+</body>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+<script> 
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    let btn = document.getElementById("btn"); 
+      let btnText = document.getElementById("btnText"); 
+      let btnIcon = document.getElementById("btnIcon"); 
+
+      if(localStorage.getItem("theme") == null){
+       localStorage.setItem("theme", "dark-theme");
+   }
+   
+   let localData = localStorage.getItem("theme");
+
+   if(localData == "dark"){
+       btnIcon.classList= "fas fa-moon";
+       btnText.innerHTML = "Dark";
+       document.body.classList.remove("light-theme"); 
+   }
+   else if(localData == "light"){
+       btnIcon.classList = "fas fa-sun";
+       btnText.innerHTML = "Light";
+       document.body.classList.add("light-theme"); 
+   }
+
+      btn.onclick = function(){
+             document.body.classList.toggle("light-theme");
+
+             if(document.body.classList.contains("light-theme")){
+               btnIcon.classList = "fas fa-sun";
+               btnText.innerHTML = "Light";
+               localStorage.setItem("theme","light");
+             }
+             else{
+               btnIcon.classList = "fas fa-moon";
+               btnText.innerHTML = "Dark";
+               localStorage.setItem("theme","dark");
+             }
+      }
+
+      
+</script>
+
+<script>
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    })
+</script>
+
+</html>
+
+
+<!-- <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app development</li>
+                                <li><span>App Development</span><br>Building Desktop apps and Android apps</li>
+                                <li><span>Data entry</span><br>Typing and File conversion</li>
+                                <li><span>Multimedia</span><br>Video editing, Video Mixing and Livestreaming</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2020 - Current</span><br>Data entry, Livestreaming and Video Mixing  <br> at CGAC media</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021 - 2023</span><br>NID from Digital Bridge Institute</li>
+                                <li><a href="certificate.html" id="certificate"><i class="fas fa-award"></i> Check-out my certificates</a></li>
+                            </ul>
+                        </div> -->
+
+                        

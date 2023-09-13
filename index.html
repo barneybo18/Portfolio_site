@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnabas Portfolio</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="https://kit.fontawesome.com/a7b92606de.js" ></script>
+
+<link rel="apple-touch-icon" sizes="76x76" href="resources/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+<link rel="manifest" href="resources/favicons/site.webmanifest">
+
+</head>
+<body>
+     <div id="preloader"></div> 
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header"> <img src="resources/images/barnabas.png" class="logo"> </a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio"> Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                 <!-- <div class="toggle-btn" id="btn">
+                    <p><span id="btnText">Light</span>
+                        <i class="fas fa-sun" id="btnIcon"></i></p>
+                </div>  -->
+
+                
+                <i class="fas fa-bars" onclick="openmenu()"></i> 
+                
+            </nav>
+            <hr onload="display" id="navmargin">
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1><div class="barnabas">Hello, <br><span class="cursive">I'm</span>  <span class="auto-input"></span></h1>
+            </div>
+        </div>
+    </div>
+<!--  ---------about------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="resources/images/IMG_20221223_193550_551-removebg-preview.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As an enthusiastic software engineer with a passion for problem-solving and a strong background in 
+                        full-stack development, my objective is to contribute my technical expertise to develop robust and 
+                        scalable software solutions. I am dedicated to leveraging cutting-edge technologies and industry best 
+                        practices to drive innovation and efficiency
+                       </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app development</li>
+                                <li><span>App Development</span><br>Building Desktop apps and Android apps</li>
+                                <li><span>Data entry</span><br>Typing and File conversion</li>
+                                <li><span>Multimedia</span><br>Video editing, Video Mixing and Livestreaming</li>
+                                <br>
+                                <!-- <a href="progress_bar1.html" class="Skills-set-btn">My Skills-set</a> -->
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2020 - Current</span><br>Livestreaming and Video Mixing  <br> at CGAC media</li>
+                                <li><span>2022 - 2023</span><br>Intern as Software Engineer (SIWES) <br> at Lagos State Ministry of Science and Tech</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021 - 2023</span><br>Software Engineering<br>NID from Digital Bridge Institute</li>
+                                <!-- <li><a href="certificate.html" id="certificate"><i class="fas fa-award"></i> Check-out my certificates</a></li> -->
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------Services--------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web development</h2>
+                    <p>Creation of websites, Front-end develpoment
+                        <br>Html, css, Javascript, reactJs, redux, vanilla-js, nextJs, Boostrap, Tailwind CSS.
+                    </p>
+                    
+                </div> 
+                <div>
+                    <i class="fab fa-android"></i>
+                    <h2>App development</h2>
+                    <p>Java, Kotlin, React Nativ<br> Desktop, ANDROID.</p>
+                </div>
+                 <div>
+                    <i class="fa-solid fa-file-lines"></i>
+                    <h2>Data Entry</h2>
+                    <p>Typing documents, PDF to word conversion:
+                        <br>Microsoft Word, Excel and Powerpoint
+                    </p>
+                    <!-- <a href="progress_bar3.html">Learn more</a>      -->
+                </div>
+
+                <div>
+                    <i class="fas fa-video"></i>
+                    <h2>Multimedia</h2>
+                    <p>Video Editing, Livestreaming
+                        <br>Video Mixing
+                    </p>
+                    <!-- <a href="progress_bar4.html">Learn more</a> -->
+                    
+                </div> 
+            </div>
+            </div>
+
+
+            <!-- <div class="services-list">
+                <div>
+                    <i class="fas fa-video"></i>
+                    <h2>Multimedia</h2>
+                    <p>Video Editing, Livestreaming
+                        <br>Video Mixing
+                    </p>
+                   <a href="progress_bar4.html">Learn more</a> 
+                    
+                </div> 
+            </div> -->
+        </div>
+    </div>
+
+    <!-- ----------------portfolio------------ -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="resources/images/codex_2.png">
+                    <div class="layer">
+                        <h3>A chat bot like openAI chat-GPT</h3>
+                        <p>using OpenAI API and Vanilla-js</p>
+                        <a href="https://codex2-i4pg5o2he-barneybo18.vercel.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="resources/images/omnifood.png">
+                    <div class="layer">
+                        <h3>A Food Plan Website</h3>
+                        <p>Using Using HTML, CSS and Javascript</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="resources/images/quote_of_the_day.png">
+                    <div class="layer">
+                        <h3>A Quote generator app</h3>
+                        <p>Using Java</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="btn see">See more</a>
+            </div>
+            
+        </div>
+    </div>
+<!-- -----------------Contact--------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> bannyzinnovate@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +234-9084297624</p>
+                <p><i class="fas fa-location-dot"></i> Lagos, Nigeria</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/barnabas.oboh.5" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/barnabas_oboh" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/oboh-barnabas-a36a84247/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/barneybo18?tab=repositories" target="_blank"><i class="fa fa-github" ></i></a>
+                    
+                </div>
+                <a href="resources/images/Barnabas_cv.pdf" download class="btn btn2">Download CV <i class="fa-solid fa-download"></i></a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <span class="copy">&copy;</span> 2023 Oboh Barnabas. </p>
+    </div>
+</div>
+
+
+
+
+    <script> 
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxC2qxIRtyAVR5_60bwc0gRjdab4h-zom1NkyYzzEqbSJa9yK_TrS_-L9fXK-L1VY9E8A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+
+            setTimeout(function(){
+             msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <!-- -----name---- -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+      var typed = new Typed(".auto-input", {
+          strings: ["Oboh Barnabas <br>from Nigeria","A Software Engineer", "A Web Developer", "An App Developer", "A Data Entrait", "A Multimedia Specailist"],
+          typeSpeed:100,
+          backSpeed:100,
+          loop:true
+      })
+  </script>  
+  
+  <script>
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    })
+</script>
+
+<script>
+     let btn = document.getElementById("btn"); 
+       let btnText = document.getElementById("btnText"); 
+       let btnIcon = document.getElementById("btnIcon"); 
+
+       if(localStorage.getItem("theme") == null){
+        localStorage.setItem("theme", "dark-theme");
+    }
+    
+    let localData = localStorage.getItem("theme");
+
+    if(localData == "dark"){
+        btnIcon.classList= "fas fa-moon";
+        btnText.innerHTML = "Dark";
+        document.body.classList.remove("light-theme"); 
+    }
+    else if(localData == "light"){
+        btnIcon.classList = "fas fa-sun";
+        btnText.innerHTML = "Light";
+        document.body.classList.add("light-theme"); 
+    }
+
+       btn.onclick = function(){
+              document.body.classList.toggle("light-theme");
+
+              if(document.body.classList.contains("light-theme")){
+                btnIcon.classList = "fas fa-sun";
+                btnText.innerHTML = "Light";
+                localStorage.setItem("theme","light");
+              }
+              else{
+                btnIcon.classList = "fas fa-moon";
+                btnText.innerHTML = "Dark";
+                localStorage.setItem("theme","dark");
+              }
+       }
+
+       
+</script>
+
+<script>
+    var navmargin = document.getElementById("navmargin");
+
+    navmargin.style.transform = "translateX(-2500px)";
+
+    window.addEventListener("load", function(){
+        navmargin.style.transform = "translateX(0px)";
+    })
+</script>
+
+<!-- function setTheme(theme) {
+    const root = document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark-theme");
+    } else {
+      root.classList.remove("dark-theme");
+    }
+  } -->
+  
+
+<!-- ------------------ Naira sign code &#8358; ------------------- -->
+<!-- -------------------For Writing Comments VScode: Windows: Ctrl + K + U.-------------- -->
+<!-- ------------------- <input id="tel" name="tel" type="tel" placeholder="+234-5055889322"---- -->
+</body>
+</html>

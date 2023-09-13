@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.row-skills{
+    margin-bottom: 5px;
+}
+
+
+ .progress-bar-container{
+    
+    transform: translateX(350px);
+    margin-top: 5%;
+    width: fit-content;
+} 
+
+.progress-bar-container h2{
+    font-size: 18px;
+    margin: 5px 0 8px;
+    font-weight: 200;
+}
+
+.progress-bar{
+    background: #959595;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.progress-bar div{
+    height: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 0%;
+    
+}
+.progress-bar div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background: #222;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills{
+    margin-left: -130px;
+}
+
+
+
+
+.tab-titles{
+    display: flex;
+    margin: 10px 0px 40px;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+.tab-links{
+    margin-right: 100px;
+    font-size: 18px;
+    font-weight: 1000;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #FF6700;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* progress-bar */
+.html{
+    background: #e91e63;
+    animation: html 1s linear forwards;
+    -webkit-animation: html 1s linear forwards;
+}
+.css{
+    background: #1842b6;
+    animation: css 1s linear forwards;
+    -webkit-animation: css 1s linear forwards;
+}
+.javascript{
+    background: #bedf08;
+    animation: javascript 1s linear forwards;
+    -webkit-animation: javascript 1s linear forwards;
+}
+.java{
+    background: #b88e06;
+    animation: java 1s linear forwards;
+    -webkit-animation: java 1s linear forwards;
+}
+.react{
+    background: #9c27b0;
+    animation: react 1s linear forwards;
+    -webkit-animation: react 1s linear forwards;
+}
+
+.front-end{
+    background: #39f3ea;
+    animation: front-end 1s linear forwards;
+}
+
+.back-end{
+    background: #ff2301;
+    animation: back-end 1s linear forwards;
+}
+
+.kotlin{
+    background: #6a0a7a;
+    animation: kotlin 1s linear forwards;
+}
+
+.desktop{
+    background: #f0f0f0;
+    animation: desktop 1s linear forwards;
+}
+
+.android{
+    background-color: #9f0;
+    animation: android 1s linear forwards;
+}
+
+.html span{
+    border: 1px solid #e91e63;
+}
+.css span{
+    border: 1px solid #1842b6;
+}
+.javascript span{
+    border: 1px solid #bedf08;
+}
+.java span{
+    border: 1px solid #b88e06;
+}
+.react span{
+    border: 1px solid #9c27b0;
+}
+
+.front-end span{
+    border: 1px solid #39f3ea;
+}
+
+.back-end span{
+    border: 1px solid #ff2301;
+}
+
+.kotlin span{
+    border: 1px solid #6a0a7a;
+}
+
+.desktop span{
+    border: 1px solid #f0f0f0;
+}
+
+.android span{
+    border: 1px solid #9f0;
+}
+
+/* animation */
+@keyframes html{
+    100%{
+        width: 87%;
+    }
+}
+@keyframes css{
+    100%{
+        width: 78%;
+    }
+}
+@keyframes javascript{
+    100%{
+        width: 72%;
+    }
+}
+@keyframes java{
+    100%{
+        width: 75%;
+    }
+}
+@keyframes react{
+    100%{
+        width: 45%;
+    }
+}
+@keyframes front-end {
+    100%{
+        width: 80%;
+    }
+}
+@keyframes back-end {
+    100%{
+        width: 31%;
+    }
+}
+@keyframes kotlin {
+    100%{
+        width: 52%;
+    }
+}
+@keyframes desktop {
+    100%{
+        width: 80%;
+    }
+}
+@keyframes android {
+    100%{
+        width: 61%;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .progress-bar-container{
+        transform: translateX(150px);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+   
+    .progress-bar{
+        width: 450px;
+    }
+    
+}
+
+@media only screen and (max-width: 550px){
+    
+    .tab-titles{
+        transform: translateX(-20%);
+    }
+    
+    .progress-bar{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 495px){
+
+    .tab-titles{
+        transform: translateX(-35%);
+    }
+
+    .progress-bar{
+        width: 300px;
+    }
+
+
+}
+
+@media only screen and (max-width: 400px){
+
+    .progress-bar{
+        width: 260px;
+    }
+
+    .tab-titles{
+        transform: translateX(-40%);
+    }
+
+}
+
+@media only screen and (max-width: 300px){
+
+    .progress-bar{
+        width: 200px;
+    }
+
+    .tab-titles{
+        transform: translateX(-60%);
+    }
+
+}
